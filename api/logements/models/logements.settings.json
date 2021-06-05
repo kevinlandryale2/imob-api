@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "logements",
+  "info": {
+    "name": "logements",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "statut": {
+      "type": "boolean"
+    },
+    "quartier": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "contact": {
+      "type": "biginteger"
+    },
+    "prix": {
+      "type": "biginteger"
+    },
+    "type": {
+      "type": "string"
+    },
+    "nom": {
+      "type": "string"
+    },
+    "like": {
+      "type": "biginteger"
+    },
+    "images": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "ville": {
+      "type": "string"
+    }
+  }
+}
